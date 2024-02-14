@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="fade-background"></div>
-    <div id="content">
-        <button class="button" id="button1"><img src="boton_1.png" alt="Botón 1"></button>
-        <button class="button" id="button2"><img src="boton_2.png" alt="Botón 2"></button>
-        <button class="button" id="button3"><img src="boton_3.png" alt="Botón 3"></button>
-        <button class="button" id="buttonHome"><img src="boton_home.png" alt="Botón Home"></button>
-    </div>
-    <div id="overlay">
-        <div id="text-box">
-            <!-- Aquí es donde puedes escribir tu comentario -->
+   <div class="overlay"></div>
+    <div class="container">
+        <div id="button-container">
+            <img src="boton_1.png" class="button" onclick="showText('text-box-1')">
+            <img src="boton_2.png" class="button" onclick="showVideo()">
+            <img src="boton_3.png" class="button" onclick="showText('text-box-2')">
         </div>
+        <div id="text-box-1">
+            <img src="texto_1.jpg" alt="Texto" />
+        </div>
+      <div id="text-box-2">
+          <img src="texto_2.jpg" alt="Texto" />
+      </div>
+      
         <div id="video-box">
-            <!-- Aquí se reproducirá el video de YouTube -->
+            <video controls autoplay>
+                <source src="video.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
-
+    <img src="boton_home.png" id="home-button" class="button" onclick="reloadPage()">
     <script src="script.js"></script>
 </body>
 </html>
